@@ -1,0 +1,143 @@
+/* Apply font globally */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #fff;
+}
+
+/* Navbar container */
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 6%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+/* Navbar Left Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar-left img {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-left ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-left ul li {
+  cursor: pointer;
+  font-weight: 500;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.navbar-left ul li:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Navbar Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar-right .icon {
+  width: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-right .icon:hover {
+  transform: scale(1.2);
+}
+
+/* Profile Section */
+.navbar-right .nav_profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar-right .nav_profile .icons {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar-right .nav_profile .icons:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Dropdown Menu */
+.navbar-right .nav_profile .dropdwon {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #222;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: none;
+  min-width: 100px;
+  text-align: center;
+  z-index: 20;
+}
+
+.navbar-right .nav_profile:hover .dropdwon {
+  display: block;
+}
+
+.navbar-right .nav_profile .dropdwon p {
+  margin: 0;
+  padding: 5px;
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-right .nav_profile .dropdwon p:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 4%;
+  }
+
+  .navbar-left ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-right {
+    margin-top: 10px;
+  }
+}
